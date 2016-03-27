@@ -1,0 +1,18 @@
+main: io.github.mac_genius.bigbrother.BigBrother
+name: BigBrother
+version: 1.0
+author: John Harrison
+permissions:
+  bigbrother.*:
+    description: Lets a player use all commands.
+    children:
+      bigbrother.banwave: true
+  bigbrother.banwave:
+    description: Allows a player to ban all people that have been caught hacking.
+    default: op
+commands:
+  banwave:
+    description: Bans all player that have been caught hacking.
+    usage: /banwave
+    permission: bigbrother.banwave
+    permission-message: You do not have permission to do that.
